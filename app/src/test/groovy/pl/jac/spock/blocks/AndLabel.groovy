@@ -9,13 +9,13 @@ class AndLabel extends Specification {
 
     def 'should create item of give parameters'() {
         given:
-        String name = 'Jacek'
+        def name = 'Jacek'
         and:
-        Role category = Role.USER
+        def category = Role.USER
         and:
-        String mail = "jacekt@tajne.pl"
+        def mail = "jacekt@tajne.pl"
         when:
-        User user = new User(name, category, mail)
+        def user = new User(name, category, mail)
         then:
         user.getName() == name
         and:

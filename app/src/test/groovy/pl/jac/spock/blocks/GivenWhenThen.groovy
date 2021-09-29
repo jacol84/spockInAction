@@ -20,4 +20,17 @@ class GivenWhenThen extends Specification {
         user.getMail() == mail
     }
 
+    def 'should create item with def of give parameters'() {
+        given:
+        def name = 'Jacek'
+        def category = Role.USER
+        def mail = "jacekt@tajne.pl"
+        when:
+        def user = new User(name, category, mail)
+        then:
+        user.getName() == name
+        user.getCategory() == category
+        user.getMail() == mail
+    }
+
 }
