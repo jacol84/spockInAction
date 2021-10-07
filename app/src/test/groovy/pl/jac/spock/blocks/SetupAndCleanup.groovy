@@ -8,7 +8,7 @@ class SetupAndCleanup extends Specification {
 
 
     def 'should create item of give parameters'() {
-        setup: // setup & given is alias
+        setup: // setup is alias 'given'
         println "setup"
         def name = 'Jacek'
         and:
