@@ -2,12 +2,12 @@ package pl.jac.spock.user;
 
 public class User {
     private String name;
-    private Role category;
+    private Role role;
     private String mail;
 
-    public User(String name, Role category, String mail) {
+    public User(String name, Role role, String mail) {
         this.name = name;
-        this.category = category;
+        this.role = role;
         this.mail = mail;
     }
 
@@ -19,12 +19,12 @@ public class User {
         this.name = name;
     }
 
-    public Role getCategory() {
-        return category;
+    public Role getRole() {
+        return role;
     }
 
-    public void setCategory(Role category) {
-        this.category = category;
+    public void setRole(Role role) {
+        this.role = role;
     }
 
     public String getMail() {

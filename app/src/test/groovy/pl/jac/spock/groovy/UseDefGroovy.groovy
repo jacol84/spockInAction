@@ -1,25 +1,23 @@
-package pl.jac.spock.blocks
+package pl.jac.spock.groovy
 
 import pl.jac.spock.user.Role
 import pl.jac.spock.user.User
 import spock.lang.Specification
 
-class AndLabel extends Specification {
-
-
+class UseDefGroovy extends Specification {
     def 'should create item of give parameters'() {
         given:
         def name = 'Jacek'
         and:
-        def role = Role.USER
+        def category = Role.USER
         and:
         def mail = "jacekt@tajne.pl"
         when:
-        def user = new User(name, role, mail)
+        def user = new User(name, category, mail)
         then:
         user.getName() == name
         and:
-        user.getRole() == role
+        user.getRole() == category
         and:
         user.getMail() == mail
     }

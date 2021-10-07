@@ -12,15 +12,15 @@ class SetupAndCleanup extends Specification {
         println "setup"
         def name = 'Jacek'
         and:
-        def category = Role.USER
+        def role = Role.USER
         and:
         def mail = "jacekt@tajne.pl"
         when:
-        def user = new User(name, category, mail)
+        def user = new User(name, role, mail)
         then:
         user.getName() == name
         and:
-        user.getCategory() == category
+        user.getRole() == role
         and:
         user.getMail() == mail
         cleanup:

@@ -9,48 +9,48 @@ class Where extends Specification {
 
     def 'should create item of give parameters'() {
         when:
-        User user = new User(name, category, mail)
+        User user = new User(name, role, mail)
         then:
         user.getName() == name
         and:
-        user.getCategory() == category
+        user.getRole() == role
         and:
         user.getMail() == mail
         where:
-        category   | name    | mail
+        role   | name    | mail
         Role.ADMIN | "jacek" | "jac@mik.pl"
         Role.ADMIN | "jacek" | null
         Role.USER  | "jacek" | "jac@mik.pl"
     }
 
-    @Unroll("with Unroll - should create User(#name, #category, #mail) of give parameters")
+    @Unroll("with Unroll - should create User(#name, #role, #mail) of give parameters")
     def 'should create item of give parameters2'() {
         when:
-        User user = new User(name, category, mail)
+        User user = new User(name, role, mail)
         then:
         user.getName() == name
         and:
-        user.getCategory() == category
+        user.getRole() == role
         and:
         user.getMail() == mail
         where:
-        category   | name    | mail
+        role   | name    | mail
         Role.ADMIN | "jacek" | "jac@mik.pl"
         Role.ADMIN | "jacek" | null
         Role.USER  | "jacek" | "jac@mik.pl"
     }
 
-    def 'without Unroll - should create User(#name, #category, #mail) of give parameters'() {
+    def 'without Unroll - should create User(#name, #role, #mail) of give parameters'() {
         when:
-        User user = new User(name, category, mail)
+        User user = new User(name, role, mail)
         then:
         user.getName() == name
         and:
-        user.getCategory() == category
+        user.getRole() == role
         and:
         user.getMail() == mail
         where:
-        category   | name    | mail
+        role   | name    | mail
         Role.ADMIN | "jacek" | "jac@mik.pl"
         Role.ADMIN | "jacek" | null
         Role.USER  | "jacek" | "jac@mik.pl"
@@ -58,15 +58,15 @@ class Where extends Specification {
 
     def 'use iterationIndex - should create User[#iterationIndex] of give parameters'() {
         when:
-        User user = new User(name, category, mail)
+        User user = new User(name, role, mail)
         then:
         user.getName() == name
         and:
-        user.getCategory() == category
+        user.getRole() == role
         and:
         user.getMail() == mail
         where:
-        category   | name    | mail
+        role   | name    | mail
         Role.ADMIN | "jacek" | "jac@mik.pl"
         Role.ADMIN | "jacek" | null
         Role.USER  | "jacek" | "jac@mik.pl"
